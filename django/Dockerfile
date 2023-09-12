@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.4
 
-FROM --platform=$BUILDPLATFORM python:3.9.5-alpine AS builder
+FROM --platform=linux/amd64 python:3.9.5-alpine AS build
 EXPOSE 8000
 WORKDIR /app
 COPY requirements.txt /app
